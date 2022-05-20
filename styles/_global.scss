@@ -1,0 +1,34 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+h1 {
+    font-size: $header1;
+}
+li,buttons,label,input,p,a {
+    font-size: $text;
+}
+h2 {
+    font-size: $header2;
+}
+h3 {
+    font-size: $header3;
+}
+h4, h5 {
+    font-size: $header4;
+}
+a {
+    color: $gray-text;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}

@@ -1,0 +1,134 @@
+.main-header {
+    margin: 0 0 0 auto;
+    width: 95%;
+}
+
+nav {
+    @include flex(center, row, space-between);
+
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    width:  60%;
+
+    .logo {
+        @include flex(center, row, start);
+        flex: 1 1 10rem;
+
+        h1 {
+            margin: 0 2rem
+        }
+    }
+
+    ul {
+        @include flex(center, row, space-around);
+        flex: 1 1 40rem;
+    }
+}
+
+.intro {
+    @include flex(center, row, space-between);
+
+    flex-wrap: wrap;
+    margin: auto;
+    min-height: 90vh;
+    width: 90%;
+
+    h2 {
+        background: $gradient;
+        background-clip: text;
+        display: inline-block;
+        font-size: 8rem;
+        padding-top: 2rem;
+        -webkit-text-fill-color: transparent;
+    }
+
+    h3 {
+        font-size: 6rem;
+        padding: 2rem 0;
+    }
+
+    p {
+        color: $gray-text;
+        padding-top: 2rem;
+    }
+}
+
+.splash {
+    height: 100%;
+    position:absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.intro-social {
+    margin-top: 4rem;
+
+    a {
+        margin-right: 5rem;
+    }
+}
+
+.active {
+    background: $gray-text;
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem 3rem;
+}
+
+.intro-text {
+    flex: 2 1 40rem;
+}
+
+.intro-images {
+    flex: 1 1 60rem;
+}
+
+.intro-images svg {
+    width: 100%;
+}
+
+#plant-left {
+    animation: plant 1.5s ease infinite alternate;
+}
+#plant-right {
+    animation: plant 1.5s ease infinite alternate 0.5s;
+}
+
+#me {
+    animation: me 2s ease infinite alternate;
+    transform-origin: center;
+}
+
+#clock-arrow {
+    animation: clock 60s linear infinite;
+    transform-box: fill-box;
+    transform-origin: bottom;
+}
+
+@keyframes me {
+    from {
+        transform: rotateZ(-3deg);
+    }
+    to {
+        transform: rotateZ(3deg);
+    }
+}
+
+@keyframes plant {
+    from {
+        transform:  translateY(0%);
+    }
+    to {
+        transform:  translateY(-30%);
+    }
+}
+
+@keyframes clock {
+    from {
+        transform:  rotateZ(0deg);
+    }
+    to {
+        transform:  rotateZ(360deg);
+    }
+}

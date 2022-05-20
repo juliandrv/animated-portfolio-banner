@@ -1,0 +1,78 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex($align,$direction, $justify) {
+    align-items: $align;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@import './global';
+@import './intro';
+
+@media only screen and (max-width: 1332px){
+    html {
+        font-size: 53%;
+    }
+    nav {
+        width: 100%
+    }
+}
+
+@media only screen and (max-width: 942px){
+    .splash {
+        display: none;
+    }
+    .intro-images {
+        padding: 6rem 0;
+    }
+    .intro-images svg {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 756px) {
+    html {
+        font-size: 46%;
+    }
+    .main-header {
+        width: 100%;
+    }
+    nav {
+        .logo {
+            @include flex(center, column, center);
+        }
+    }
+    .active {
+        padding: 1rem 2rem;
+
+    }
+    .intro-text {
+        margin-top: 6rem;
+        text-align: center;
+    }
+    .intro-social{
+        a {
+            margin: 0;
+            padding: 0 1rem;
+        }
+        img {
+            width: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    nav {
+        .logo {
+            margin-bottom: 3rem;
+        }
+    }
+}
